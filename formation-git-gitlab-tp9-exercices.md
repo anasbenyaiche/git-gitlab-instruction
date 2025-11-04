@@ -1,4 +1,4 @@
-# 🧩 Formation GitLab – Exercices pratiques
+#  Formation GitLab – Exercices pratiques
 
 ---
 
