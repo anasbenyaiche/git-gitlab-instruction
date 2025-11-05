@@ -1,104 +1,86 @@
-#  Formation GitLab – Exercices pratiques
+
+# Collaborer avec GitLab
+
+Dans cet exercice, vous allez apprendre à collaborer efficacement à l’aide des fonctionnalités clés de **Git** et **GitLab**.
+Vous allez créer et gérer des issues, travailler sur une branche, discuter des modifications, gérer des fichiers ignorés, utiliser le *stash* et effectuer un *rebase* avant la fusion.
 
 ---
 
-## **Exercice 1 – Créer un projet GitLab**
+## Étapes principales
 
-1. Connecte-toi sur [https://gitlab.com](https://gitlab.com) (ou sur ton instance locale).  
-2. Clique sur **“New project” → “Create blank project”**.  
-3. Donne un nom au projet :  
-   **formation-gitlab-demo**  
-4. Choisis la visibilité : **Private**.  
-5. Ne coche pas l’option *“Initialize repository with a README”* (on le fera à la main).  
-6. Clique sur **Create project**.  
-7. Une fois le projet créé, copie l’**URL HTTPS ou SSH** du dépôt.  
-8. Garde cette URL : elle servira pour le clonage lors de l’exercice suivant.
+### 1. Créer une issue
+
+Créez une nouvelle issue dans GitLab pour améliorer la description du fichier `README.md`.
+Ajoutez un titre et une description indiquant les points à compléter.
 
 ---
 
-## **Exercice 2 – Ajouter des collaborateurs et gérer les droits**
+### 2. Gérer les issues avec un board
 
-1. Ouvre ton projet GitLab.  
-2. Dans le menu latéral, clique sur **“Project → Members”**.  
-3. Clique sur **“Invite members”**.  
-4. Ajoute les utilisateurs suivants avec leurs rôles :  
-   - **Maintainer** : accès complet au projet.  
-   - **Developer** : peut pousser du code et créer des Merge Requests.  
-   - **Reporter** : lecture seule, peut commenter.  
-5. Clique sur **“Invite”** pour valider.  
-6. Vérifie que les membres apparaissent avec les bons rôles.  
-7. Demande au **Developer** de cloner le projet et de tenter un *push*.  
-8. Vérifie que le **Reporter** ne peut pas pousser de code.
+Accédez au tableau (*Board*) des issues, créez une colonne **In Progress**, 
+et déplacez l’issue correspondante dans cette colonne.
 
 ---
 
-## **Exercice 3 – Créer et protéger la branche principale**
+### 3. Créer une merge request
 
-1. Ouvre un terminal et clone ton projet :  
-   ```bash
-   git clone <URL_du_dépôt>
-   cd formation-gitlab-demo
-   ```
-2. Crée un premier fichier et fais ton premier commit.  
-3. Pousse la branche `main` vers le dépôt distant.  
-4. Dans GitLab, ouvre **“Settings → Repository → Protected branches”**.  
-5. Clique sur **“Protect branch”** et configure :  
-   - **Branch name** : `main`  
-   - **Allowed to push** : Maintainers only  
-   - **Allowed to merge** : Maintainers only  
-6. Clique sur **“Protect”** pour enregistrer.  
-7. Demande à un Developer de tenter un `git push origin main` : l’action doit être refusée.
+Créez une nouvelle branche dédiée à la correction du fichier `README.md`.
+Modifiez le contenu pour qu’il soit plus clair et structuré :
 
----
+```markdown
+# Atelier Git & GitLab
 
-## **Exercice 4 – Créer une Merge Request (MR)**
+Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
 
-1. Depuis ton terminal (en Developer) : crée une branche `feature/ajout-readme` et ajoute une ligne au `README.md`.  
-2. Committe et pousse la branche.  
-3. Dans GitLab, clique sur **“Create merge request”**.  
-4. Vérifie les paramètres :  
-   - **Source branch** : `feature/ajout-readme`  
-   - **Target branch** : `main`  
-5. Donne un titre clair :  
-   **feat: ajout d’un message de bienvenue dans le README**  
-6. Ajoute une description expliquant la modification.  
-7. Assigne la Merge Request à ton Maintainer.  
-8. Le Maintainer commente, approuve et clique sur **“Merge”** pour intégrer la modification.
+L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
+
+## Contenu du projet
+
+* [Flux linéaire (Linear Workflow)](linear-workflow.md)
+* [Inspection et exploration de l’historique](inspecting.md)
+* [Modification et correction de commits (Amending Commits)](amending.md)
+```
+
+Soumettez ensuite une **merge request** liée à l’issue créée.
 
 ---
 
-## **Exercice 5 – Configurer les approbations et les CODEOWNERS**
+### 4. Discuter et résoudre des commentaires
 
-1. Ouvre ton projet GitLab.  
-2. Va dans **“Settings → General → Merge request approvals”**.  
-3. Active **“Require approvals”** et indique `1`.  
-4. Coche **“Require approval from Code Owners”**.  
-5. Crée un fichier `CODEOWNERS` à la racine du dépôt :
-   ```text
-   # Code owners
-   README.md   @MaintainerUser
-   ```
-6. Pousse ce fichier dans une nouvelle branche et crée une MR.  
-7. Une fois sur `main`, modifie à nouveau `README.md` dans une autre branche.  
-8. Crée une nouvelle MR et vérifie que GitLab demande une approbation automatique du Maintainer avant le merge.
+Commentez une ligne du fichier dans l’onglet **Changes**, puis ajoutez une suggestion d’amélioration.
+Appliquez la correction proposée et marquez la discussion comme résolue.
 
 ---
 
-## **Exercice 6 – Créer un tag et une release**
+### 5. Utiliser le stash
 
-1. Ouvre ton terminal :  
-   ```bash
-   git checkout main
-   git pull
-   git tag -a v1.0.0 -m "Première version stable"
-   git push origin v1.0.0
-   ```
-2. Dans GitLab, ouvre **“Deploy → Releases”**.  
-3. Clique sur **“New release”**.  
-4. Sélectionne le tag **v1.0.0**.  
-5. Ajoute une description claire :  
-   **Version 1.0 – Ajout du README initial et première MR fusionnée.**  
-6. Clique sur **“Create release”**.  
-7. Vérifie que la release est bien visible avec son tag et sa description.
+Ajoutez du contenu temporaire dans un fichier, mettez-le de côté avec un *stash*,
+puis restaurez-le pour reprendre le travail sans perdre vos modifications.
 
 ---
+
+### 6. Gérer les fichiers à ignorer
+
+Créez des dossiers (par exemple `temp` et `logs`) et configurez un fichier `.gitignore`
+pour que ces éléments soient exclus du suivi Git.
+
+---
+
+### 7. Corriger un commit avec amend
+
+Si une petite erreur est détectée après un commit, modifiez le dernier commit
+afin de corriger son contenu sans créer un nouveau commit.
+
+---
+
+### 8. Faire un rebase avant la fusion
+
+Avant de fusionner la branche, mettez-la à jour avec la branche principale (`main`)
+à l’aide d’un *rebase*. Cela permet de garder un historique clair et d’éviter les conflits lors de la fusion.
+
+---
+
+### 9. Fusionner la merge request
+
+Une fois la branche à jour et toutes les discussions résolues, fusionnez la **merge request** dans la branche principale.
+Supprimez ensuite la branche de travail devenue inutile.
