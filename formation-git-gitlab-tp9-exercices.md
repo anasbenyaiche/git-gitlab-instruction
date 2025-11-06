@@ -46,7 +46,8 @@ L’objectif est d’apprendre à versionner, collaborer et gérer un projet à 
 ```markdown
 # Atelier Git & GitLab
 ### Equipe 2 : SSR
-
+#name
+#feature  - issues 
 Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
 
 L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
