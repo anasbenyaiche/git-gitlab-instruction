@@ -29,11 +29,44 @@ Modifiez le contenu pour qu’il soit plus clair et structuré :
 
 ```markdown
 # Atelier Git & GitLab
-
+### Equipe 1 : Blues
+#name
+#feature  - issues 
 Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
 
 L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
 
+## Contenu du projet
+
+* [Flux linéaire (Linear Workflow)](linear-workflow.md)
+* [Inspection et exploration de l’historique](inspecting.md)
+* [Modification et correction de commits (Amending Commits)](amending.md)
+```
+
+```markdown
+# Atelier Git & GitLab
+### Equipe 2 : SSR
+
+Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
+
+L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
+#name
+#feature  - issues 
+## Contenu du projet
+
+* [Flux linéaire (Linear Workflow)](linear-workflow.md)
+* [Inspection et exploration de l’historique](inspecting.md)
+* [Modification et correction de commits (Amending Commits)](amending.md)
+```
+
+```markdown
+# Atelier Git & GitLab
+### Equipe 2 : Les filles
+Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
+
+L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
+#name
+#feature  - issues 
 ## Contenu du projet
 
 * [Flux linéaire (Linear Workflow)](linear-workflow.md)
