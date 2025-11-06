@@ -10,7 +10,7 @@ Vous allez créer et gérer des issues, travailler sur une branche, discuter des
 
 ### 1. Créer une issue
 
-Créez une nouvelle issue dans GitLab pour améliorer la description du fichier `README.md`.
+Créez une nouvelle issue dans GitLab pour améliorer la description du fichier `README_NOM_DE_EQUIPE.md`.
 Ajoutez un titre et une description indiquant les points à compléter.
 
 ---
