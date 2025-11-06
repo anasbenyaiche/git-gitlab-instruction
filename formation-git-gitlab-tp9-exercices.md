@@ -24,7 +24,7 @@ et déplacez l’issue correspondante dans cette colonne.
 
 ### 3. Créer une merge request
 
-Créez une nouvelle branche dédiée à la correction du fichier `README.md`.
+Créez une nouvelle branche dédiée à la correction du fichier `README_NOM_DE_EQUIPE.md`.
 Modifiez le contenu pour qu’il soit plus clair et structuré :
 
 ```markdown
