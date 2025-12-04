@@ -29,7 +29,7 @@ Modifiez le contenu pour qu’il soit plus clair et structuré :
 
 ```markdown
 # Atelier Git & GitLab
-### Equipe 1 : KLM-XCA
+### Equipe 1 : PROD
 #name
 #feature  - issues 
 Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
@@ -45,7 +45,7 @@ L’objectif est d’apprendre à versionner, collaborer et gérer un projet à 
 
 ```markdown
 # Atelier Git & GitLab
-### Equipe 2 : equipe_slp
+### Equipe 2 : DEV
 #name
 #feature  - issues 
 Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
@@ -62,7 +62,7 @@ L’objectif est d’apprendre à versionner, collaborer et gérer un projet à 
 
 ```markdown
 # Atelier Git & GitLab
-### Equipe 2 : zpc-tmo
+### Equipe 2 : PROJET
 Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
 
 L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
