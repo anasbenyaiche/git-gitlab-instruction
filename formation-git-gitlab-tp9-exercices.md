@@ -104,17 +104,6 @@ pour que ces éléments soient exclus du suivi Git.
 
 Si une petite erreur est détectée après un commit, modifiez le dernier commit
 afin de corriger son contenu sans créer un nouveau commit.
+push les dernier modif
 
 ---
-
-### 8. Faire un rebase avant la fusion
-
-Avant de fusionner la branche, mettez-la à jour avec la branche principale (`main`)
-à l’aide d’un *rebase*. Cela permet de garder un historique clair et d’éviter les conflits lors de la fusion.
-
----
-
-### 9. Fusionner la merge request
-
-Une fois la branche à jour et toutes les discussions résolues, fusionnez la **merge request** dans la branche principale.
-Supprimez ensuite la branche de travail devenue inutile.
