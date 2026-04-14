@@ -37,12 +37,15 @@ L’Issue doit être déplacée dans le tableau de bord au fur et à mesure de s
 
 Chaque équipe doit :
 
-- ajouter 3 entreprises dans le fichier `index.html`  
-- respecter la même structure de carte  
+- ajouter 3 entreprises dans le fichier `index.html`
+- Chaque équipe devra ajouter des cartes représentant des entreprises avec :
+un logo
+un nom
+une description
+une activité
+Toutes les équipes modifient le même fichier.. 
+- respecter la même structure de carte.  
 - ajouter un minimum de style pour afficher correctement les cartes  
-
-**Important :**  
-Toutes les équipes doivent modifier la même zone du fichier afin de provoquer des conflits.
 
 ---
 
