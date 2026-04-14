@@ -1,109 +1,105 @@
+# Exercice collaboratif GitLab
 
-# Collaborer avec GitLab
+## Étape 1 : Initialisation du projet
 
-Dans cet exercice, vous allez apprendre à collaborer efficacement à l’aide des fonctionnalités clés de **Git** et **GitLab**.
-Vous allez créer et gérer des issues, travailler sur une branche, discuter des modifications, gérer des fichiers ignorés, utiliser le *stash* et effectuer un *rebase* avant la fusion.
-
----
-
-## Étapes principales
-
-### 1. Créer une issue
-
-Créez une nouvelle issue dans GitLab pour améliorer la description du fichier `README_NOM_DE_EQUIPE.md`.
-Ajoutez un titre et une description indiquant les points à compléter.
+- Créer un projet sur GitLab  
+- Ajouter un fichier `index.html`  
+- Ajouter une structure de base contenant une zone destinée à accueillir les cartes  
 
 ---
 
-### 2. Gérer les issues avec un board
+## Étape 2 : Création des branches
 
-Accédez au tableau (*Board*) des issues, créez une colonne **In Progress**, 
-et déplacez l’issue correspondante dans cette colonne.
+Chaque équipe crée sa propre branche avec le nom de son équipe :
 
----
+- dev  
+- test  
+- maintenance  
+- prod  
 
-### 3. Créer une merge request
-
-Créez une nouvelle branche dédiée à la correction du fichier `README_NOM_DE_EQUIPE.md`.
-Modifiez le contenu pour qu’il soit plus clair et structuré :
-
-```markdown
-# Atelier Git & GitLab
-### Equipe 1 : PROD
-#name
-#feature  - issues 
-Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
-
-L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
-
-## Contenu du projet
-
-* [Flux linéaire (Linear Workflow)](linear-workflow.md)
-* [Inspection et exploration de l’historique](inspecting.md)
-* [Modification et correction de commits (Amending Commits)](amending.md)
-```
-
-```markdown
-# Atelier Git & GitLab
-### Equipe 2 : DEV
-#name
-#feature  - issues 
-Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
-
-L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
-#name
-#feature  - issues 
-## Contenu du projet
-
-* [Flux linéaire (Linear Workflow)](linear-workflow.md)
-* [Inspection et exploration de l’historique](inspecting.md)
-* [Modification et correction de commits (Amending Commits)](amending.md)
-```
-
-```markdown
-# Atelier Git & GitLab
-### Equipe 2 : PROJET
-Ce projet contient les supports et exercices pratiques utilisés durant la formation **Git & GitLab**.
-
-L’objectif est d’apprendre à versionner, collaborer et gérer un projet à l’aide de Git et de la plateforme GitLab.
-#name
-#feature  - issues 
-## Contenu du projet
-
-* [Flux linéaire (Linear Workflow)](linear-workflow.md)
-* [Inspection et exploration de l’historique](inspecting.md)
-* [Modification et correction de commits (Amending Commits)](amending.md)
-```
-
-Soumettez ensuite une **merge request** liée à l’issue créée.
+Chaque équipe pousse sa branche sur le dépôt distant.
 
 ---
 
-### 4. Discuter et résoudre des commentaires
+## Étape 3 : Création des Issues
 
-Commentez une ligne du fichier dans l’onglet **Changes**, puis ajoutez une suggestion d’amélioration.
-Appliquez la correction proposée et marquez la discussion comme résolue.
+Chaque équipe doit créer une Issue dans GitLab avec :
 
----
+- un titre indiquant l’ajout des entreprises  
+- une description claire du travail à faire  
+- l’assignation des membres de l’équipe  
 
-### 5. Utiliser le stash
-
-Ajoutez du contenu temporaire dans un fichier, mettez-le de côté avec un *stash*,
-puis restaurez-le pour reprendre le travail sans perdre vos modifications.
+L’Issue doit être déplacée dans le tableau de bord au fur et à mesure de son avancement (To Do, Doing, Done).
 
 ---
 
-### 6. Gérer les fichiers à ignorer
+## Étape 4 : Développement
 
-Créez des dossiers (par exemple `temp` et `logs`) et configurez un fichier `.gitignore`
-pour que ces éléments soient exclus du suivi Git.
+Chaque équipe doit :
+
+- ajouter 3 entreprises dans le fichier `index.html`  
+- respecter la même structure de carte  
+- ajouter un minimum de style pour afficher correctement les cartes  
+
+**Important :**  
+Toutes les équipes doivent modifier la même zone du fichier afin de provoquer des conflits.
+
+---
+
+## Étape 5 : Commit et Push
+
+Chaque équipe enregistre ses modifications avec des messages clairs, puis envoie son travail sur sa branche.
 
 ---
 
-### 7. Corriger un commit avec amend
+## Étape 6 : Création des Merge Requests
 
-Si une petite erreur est détectée après un commit, modifiez le dernier commit
-afin de corriger son contenu sans créer un nouveau commit.
-push les dernier modif
+Chaque équipe crée une Merge Request vers la branche `main`.
+
+La Merge Request doit :
+
+- être liée à l’Issue  
+- être assignée à une autre équipe pour la review  
 
 ---
+
+## Étape 7 : Code Review
+
+Les équipes doivent relire le travail des autres équipes :
+
+- vérifier la qualité du code  
+- proposer des améliorations si nécessaire  
+- valider ou refuser la Merge Request  
+
+Aucune Merge Request ne doit être acceptée sans validation.
+
+---
+
+## Étape 8 : Gestion des conflits
+
+Lors de la tentative de fusion avec la branche principale, des conflits vont apparaître.
+
+Chaque équipe doit :
+
+- récupérer les dernières modifications de la branche `main`  
+- identifier les conflits dans le fichier  
+- corriger manuellement les conflits  
+- valider les corrections  
+
+---
+
+## Étape 9 : Validation et Merge
+
+Le responsable de la branche `main` :
+
+- vérifie la qualité du code  
+- s’assure que les règles sont respectées  
+- valide les Merge Requests  
+
+Les branches sont ensuite fusionnées dans `main`.
+
+---
+
+## Étape finale : Rebase
+
+Une fois plusieurs fusions réalisées, chaque équipe doit mettre à jour sa branche avec la branche principale en utilisant le rebase.
