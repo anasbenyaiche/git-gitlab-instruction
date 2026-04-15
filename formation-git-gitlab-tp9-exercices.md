@@ -37,12 +37,14 @@ L’Issue doit être déplacée dans le tableau de bord au fur et à mesure de s
 
 Chaque équipe doit :
 
-- ajouter 3 entreprises dans le fichier `index.html`
-- Chaque équipe devra ajouter des cartes représentant des entreprises avec :
-un logo
-un nom
-une description
-une activité
+- ajouter 3 artiste dans le fichier `index.html`
+- Chaque équipe devra ajouter des cartes représentant des ar avec :
+nom du groupe
+description
+type de musique
+album
+image
+
 Toutes les équipes modifient le même fichier.. 
 - respecter la même structure de carte.  
 - ajouter un minimum de style pour afficher correctement les cartes  
